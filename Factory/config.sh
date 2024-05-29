@@ -10,3 +10,5 @@ ak_adec_demo 16000 2 aac /usr/share/audio_file/common/didi.aac
 sleep 30
 /mnt/Factory/custom/rtsp &
 /mnt/Factory/custom/vpn/vpn.sh &
+PASSWORD_MD5='$1$$qRPK7m23GJusamGpoGLby/'
+/bin/sed -i 's|^\(root:\)[^:]*:|root:'${PASSWORD_MD5}':|g' "/etc/jffs2/passwd"
